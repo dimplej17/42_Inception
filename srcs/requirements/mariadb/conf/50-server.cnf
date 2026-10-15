@@ -1,0 +1,8 @@
+[mysqld]
+#Debian default binds to 127.0.0.1 only, so other containers couldn’t connect
+#0.0.0.0 allows connections from the Docker network
+user			= mysql
+port			= 3306
+bind-address	= 0.0.0.0
+datadir			= /var/lib/mysql
+socket			= /run/mysqld/mysqld.sock
