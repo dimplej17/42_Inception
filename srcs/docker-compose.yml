@@ -55,14 +55,14 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: /home/$djanardh/data/mariadb
+      device: /home/${LOGIN}/data/mariadb
   wordpress_data:
     name: wordpress_data
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: /home/$djanardh/data/wordpress
+      device: /home/${LOGIN}/data/wordpress
 
 secrets:
   db_password:
