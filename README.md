@@ -28,6 +28,7 @@ Prerequisites: a Linux VM with Docker Engine, the Docker Compose plugin and `mak
 3. Add the domain to the hosts file: `127.0.0.1 djanardh.42.fr`.
 4. Run `make`.
 5. Open `https://djanardh.42.fr` (accept the self-signed certificate warning).
+(Open the URL in a browser inside the VM, or on any machine where the domain resolves to the VM’s IP.)
 
 Other commands: `make stop`, `make start`, `make down`, `make logs`,
 `make fclean` (deletes containers, images and all data), `make re`.
