@@ -73,20 +73,20 @@ The repository contains:
 
 ### Comparisons
 
-**Virtual Machines vs Docker**
+**Virtual Machines vs Docker** 
 A VM mimics a whole machine with its own kernel, so it is heavy and slow to
 start. A container shares the host kernel and isolates only processes and
 filesystem, so it is lightweight and starts in seconds. VMs give stronger
 isolation; containers give speed and reproducibility. Here, the VM hosts Docker
 and the containers run the services.
 
-**Secrets vs Environment Variables**
+**Secrets vs Environment Variables** 
 Environment variables are simple but visible through `docker inspect` and
 inherited by child processes. Docker secrets are mounted as files under
 `/run/secrets/` and are not shown in the container's configuration. In this
 project, passwords are secrets, and non-confidential values live in `.env`.
 
-**Docker Network vs Host Network**
+**Docker Network vs Host Network** 
 A Docker bridge network gives containers their own isolated network with DNS by
 service name (`mariadb`, `wordpress`), and only published ports are reachable
 from outside. The host network removes this isolation and shares the host's
