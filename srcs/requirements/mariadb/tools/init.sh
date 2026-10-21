@@ -3,6 +3,7 @@ set -e
 
 DB_PASS=$(cat /run/secrets/db_password)
 DB_ROOT_PASS=$(cat /run/secrets/db_root_password)
+# start a temporary socket-only server
 SOCK=/run/mysqld/mysqld.sock
 
 mkdir -p /run/mysqld
@@ -32,5 +33,5 @@ EOF
 	wait "$TMP_PID"
 fi
 
-# exec replaces the shell, so mariadbd becomes PID 1 and receives signals properly
+# exec replaces the shell, so mariadbd becomes PID 1/real server and receives signals properly
 exec mariadbd --user=mysql
